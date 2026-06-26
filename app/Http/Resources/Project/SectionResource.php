@@ -18,7 +18,7 @@ class SectionResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'project_id' => $this->project_id,
-            'tasks_url' => url("/api/sections/{$this->id}/tasks"),
+            'tasks_url' => route('tasks.index', $this->id),
         ];
     }
 }
