@@ -16,6 +16,6 @@ Route::prefix('v1')->group(function () {
 
     Route::get('/projects/{project}/sections', [SectionController::class, 'index']);
 
-    Route::get('/sections/{section}/tasks', [TaskController::class, 'index']);
+    Route::get('/sections/{section}/tasks', [TaskController::class, 'index'])->name('tasks.index');
     // });
 });
