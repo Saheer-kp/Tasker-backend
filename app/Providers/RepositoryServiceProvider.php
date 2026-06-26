@@ -3,8 +3,10 @@
 namespace App\Providers;
 
 use App\Repositories\Eloquent\ProjectRepository;
+use App\Repositories\Eloquent\SectionRepository;
 use App\Repositories\Eloquent\TaskRepository;
 use App\Repositories\Interfaces\ProjectRepositoryInterface;
+use App\Repositories\Interfaces\SectionRepositoryInterface;
 use App\Repositories\Interfaces\TaskRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
 
@@ -16,6 +18,7 @@ class RepositoryServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->app->bind(ProjectRepositoryInterface::class, ProjectRepository::class);
+        $this->app->bind(SectionRepositoryInterface::class, SectionRepository::class);
         $this->app->bind(TaskRepositoryInterface::class, TaskRepository::class);
     }
 
