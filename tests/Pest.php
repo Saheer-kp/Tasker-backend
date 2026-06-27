@@ -15,8 +15,8 @@ use Tests\TestCase;
 */
 
 pest()->extend(TestCase::class)
- // ->use(RefreshDatabase::class)
-    ->in('Feature');
+    ->use(RefreshDatabase::class)
+    ->in('Feature', 'Unit');
 
 /*
 |--------------------------------------------------------------------------
@@ -44,7 +44,14 @@ expect()->extend('toBeOne', function () {
 |
 */
 
-function something()
+function validatedRequest(string $requestClass, array $data)
 {
-    // ..
+
+    $request = new $requestClass();
+    $request->headers->set('Accept', 'application/json');
+    $request->merge($data);
+    $request->setContainer(app());
+    $request->validateResolved();
+
+    return $request;
 }
