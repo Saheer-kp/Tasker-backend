@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
 use App\Models\User\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
 
@@ -33,7 +34,6 @@ class AuthController extends Controller
 
     public function logout(Request $request)
     {
-        // നിലവിലുള്ള ആക്സസ് ടോക്കൺ ഡിലീറ്റ് ചെയ്യുന്നു
         $request->user()->currentAccessToken()->delete();
 
         return response()->json([
@@ -43,6 +43,6 @@ class AuthController extends Controller
 
     public function me(Request $request)
     {
-        return response()->json($request->user());
+        return response()->json(Auth::user());
     }
 }
