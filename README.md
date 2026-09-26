@@ -31,10 +31,10 @@ This repository contains the backend API built with Laravel.
 
 Make sure the following are installed on your system:
 
-- PHP 8.2+
+- PHP 8.3+
 - Composer
 - MySQL 8+
-- Laravel requirements
+- Laravel 13.8+
 - Git
 
 ## ⚙️ Installation
