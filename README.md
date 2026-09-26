@@ -251,31 +251,14 @@ The application follows Laravel's built-in security practices, including:
 
 Sensitive environment variables and credentials must not be committed to the repository.
 
-## Development Workflow
 
-The recommended development workflow is:
-
-```text
-Create Branch
-      ↓
-Implement Feature
-      ↓
-Write Tests
-      ↓
-Run Test Suite
-      ↓
-Review Code
-      ↓
-Create Pull Request
-      ↓
-Merge
-```
 
 ## Code Quality
 
 The project aims to maintain:
 
 - Clean and maintainable code
+- Repository pattern
 - SOLID principles
 - Laravel conventions
 - Separation of responsibilities
@@ -286,19 +269,6 @@ The project aims to maintain:
 - Proper authorization
 - Consistent API responses
 
-## Future Improvements
-
-Planned improvements may include:
-
-- Real-time project collaboration
-- Notifications
-- Advanced project roles and permissions
-- Activity logs
-- Comments and discussions
-- File attachments
-- API documentation
-- CI/CD pipeline
-- Docker support
 
 ## License
 
@@ -306,6 +276,6 @@ This project is currently developed as a personal project and portfolio applicat
 
 ## Author
 
-**Shaheer K P**
+**Saheer K P**
 
 Full Stack Software Engineer
