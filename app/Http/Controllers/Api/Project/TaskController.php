@@ -14,7 +14,7 @@ class TaskController extends Controller
 
     public function index(Section $section)
     {
-        $tasks = $this->taskRepository->getTasksBySection($section, 15);
+        $tasks = $this->taskRepository->getTasksBySection($section, 10);
         return TaskResource::collection($tasks);
     }
 }
