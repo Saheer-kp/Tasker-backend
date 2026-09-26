@@ -187,14 +187,13 @@ The API is versioned under:
 Main API modules include:
 
 ```text
-/api/v1/auth
-/api/v1/users
+/api/v1/login
+/api/v1/register
 /api/v1/projects
+/api/v1/projects/{project}/sections
 /api/v1/tasks
-/api/v1/invitations
 ```
 
-API documentation will be added as the project develops.
 
 ## Authentication
 
