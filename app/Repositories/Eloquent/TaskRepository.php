@@ -13,7 +13,7 @@ class TaskRepository implements TaskRepositoryInterface
         return Task::create($data);
     }
 
-    public function getTasksBySection(Section $section, int $perPage = 15)
+    public function getTasksBySection(Section $section, int $perPage = 10)
     {
         return $section->tasks()
             ->with('assignee')
