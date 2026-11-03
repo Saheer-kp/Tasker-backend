@@ -18,7 +18,6 @@ class Section extends Model
         return $this->belongsTo(Project::class);
     }
 
-    // ഒരു സെക്ഷന്റെ കീഴിൽ ഒരുപാട് ടാസ്കുകൾ ഉണ്ടാകാം
     public function tasks(): HasMany
     {
         return $this->hasMany(Task::class);
