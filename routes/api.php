@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Ai\AiController;
 use App\Http\Controllers\Api\Auth\AuthController;
 use App\Http\Controllers\Api\Auth\RegisterController;
 use App\Http\Controllers\Api\Project\ProjectController;
@@ -20,5 +21,7 @@ Route::prefix('v1')->group(function () {
         Route::get('/projects', [ProjectController::class, 'index'])->name('projects.index');
         Route::get('/projects/{project}/sections', [SectionController::class, 'index'])->name('sections.index');
         Route::get('/sections/{section}/tasks', [TaskController::class, 'index'])->name('tasks.index');
+
+        Route::post('/ai-chat', [AiController::class, 'chat'])->name('ai-chat');
     });
 });
