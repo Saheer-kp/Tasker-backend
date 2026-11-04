@@ -1,6 +1,6 @@
 # Tasker - Backend
 
-Tasker is a public project management platform where anyone can create an account, create their own projects, and invite other users to participate in project development.
+Tasker is a Ai-featured public project management platform where anyone can create an account, create their own projects, and invite other users to participate in project development.
 
 This repository contains the backend API built with Laravel.
 
