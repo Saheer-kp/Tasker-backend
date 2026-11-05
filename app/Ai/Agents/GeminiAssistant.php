@@ -60,7 +60,7 @@ class GeminiAssistant implements Agent, Conversational, HasTools
     public function tools(): iterable
     {
         return [
-            new GetMyTasksTool($this->user)
+            new GetMyTasksTool($this->user) // Tool for getting ai response based on current user tasks 
         ];
     }
 }
